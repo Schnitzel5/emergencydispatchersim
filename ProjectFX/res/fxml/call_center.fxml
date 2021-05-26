@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #25255e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.duowoj.game.controller.CallCenterController">
+   <children>
+      <ListView fx:id="chatBox" layoutX="14.0" layoutY="386.0" prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: #404389; -fx-background-radius: 8;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="46.0" />
+      <ListView fx:id="listCase" layoutX="586.0" layoutY="46.0" prefHeight="540.0" prefWidth="200.0" style="-fx-background-color: #404389; -fx-background-radius: 8;" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="46.0" />
+      <Button fx:id="greetBtn" layoutX="340.0" layoutY="90.0" minHeight="30.0" mnemonicParsing="false" onMouseClicked="#greet" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="Begrüßung" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="50.0" />
+      <Button fx:id="callerBtn" layoutX="340.0" layoutY="145.0" minHeight="30.0" mnemonicParsing="false" onMouseClicked="#caller" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="Name des Anrufers" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="100.0" />
+      <Button fx:id="patientBtn" layoutX="340.0" layoutY="193.0" minHeight="30.0" mnemonicParsing="false" onMouseClicked="#patient" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="Name des Patienten" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="150.0" />
+      <Button fx:id="locBtn" layoutX="340.0" layoutY="250.0" minHeight="30.0" mnemonicParsing="false" onMouseClicked="#place" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="Einsatzort" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="200.0" />
+      <Button fx:id="eventBtn" layoutX="340.0" layoutY="296.0" minHeight="30.0" mnemonicParsing="false" onMouseClicked="#event" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="Ereignis" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="250.0" />
+      <Button fx:id="speakBtn" layoutX="340.0" layoutY="352.0" minHeight="30.0" mnemonicParsing="false" onMouseClicked="#speak" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="Ansprechbar" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="300.0" />
+      <Button fx:id="hurtBtn" layoutX="340.0" layoutY="410.0" minHeight="30.0" mnemonicParsing="false" onMouseClicked="#hurt" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="Schmerzen" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="400.0" />
+      <Button fx:id="preBtn" layoutX="340.0" layoutY="471.0" minHeight="30.0" mnemonicParsing="false" onMouseClicked="#pre" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="Vorerkrankungen" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="500.0" />
+      <Button fx:id="helpBtn" layoutX="348.0" layoutY="525.0" minHeight="30.0" mnemonicParsing="false" onMouseClicked="#help" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="Hilfe kommt!" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="550.0" />
+      <Button fx:id="breathBtn" layoutX="340.0" layoutY="382.0" minHeight="30.0" mnemonicParsing="false" onMouseClicked="#breath" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="Atem" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="350.0" />
+      <Button fx:id="ageBtn" layoutX="463.0" layoutY="410.0" minHeight="30.0" mnemonicParsing="false" onMouseClicked="#age" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="Alter" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="450.0" />
+      <Button fx:id="acceptFirstCaseBtn" layoutX="12.0" layoutY="14.0" minHeight="25.0" mnemonicParsing="false" onMouseClicked="#acceptFirstCase" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="1. Anruf annehmen" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="10.0" />
+      <Button fx:id="acceptCaseBtn" layoutX="134.0" layoutY="10.0" minHeight="25.0" mnemonicParsing="false" onMouseClicked="#acceptCase" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="Anruf annehmen" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="10.0" />
+      <Button fx:id="disconnectBtn" layoutX="247.0" layoutY="10.0" minHeight="25.0" mnemonicParsing="false" onMouseClicked="#disconnect" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="Trennen" AnchorPane.leftAnchor="255.0" AnchorPane.topAnchor="10.0" />
+      <Button fx:id="clearChatBtn" layoutX="314.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#clearChat" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="Leeren" AnchorPane.leftAnchor="325.0" AnchorPane.topAnchor="10.0" />
+      <Button fx:id="dndBtn" layoutX="387.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#dnd" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="Allow Disturb" AnchorPane.leftAnchor="385.0" AnchorPane.topAnchor="10.0" />
+      <Label layoutX="590.0" layoutY="23.0" style="-fx-text-fill: #b5c0ff;" text="Call in Line" AnchorPane.leftAnchor="592.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="simspeed" layoutX="734.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#simspeedUp" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="SimSpeed: 1x" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="10.0" />
+      <Button fx:id="overviewBtn" layoutX="481.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#openOverview" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="Übersicht" AnchorPane.leftAnchor="495.0" AnchorPane.topAnchor="10.0" />
+   </children>
+</AnchorPane>

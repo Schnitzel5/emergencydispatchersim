@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #25255e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.duowoj.game.controller.CallCenterFormsController">
+   <children>
+      <Button fx:id="saveBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#save" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="Speichern" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="8.0" />
+      <Button fx:id="phoneBtn" layoutX="95.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#insertPhone" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="Tel. Nr." AnchorPane.leftAnchor="88.0" AnchorPane.topAnchor="8.0" />
+      <Button fx:id="archiveBtn" layoutX="164.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#archiveCase" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="Fall abschließen" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="8.0" />
+      <Pane layoutX="22.0" layoutY="49.0" minHeight="540.0" minWidth="350.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #404389;" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <Label layoutX="8.0" layoutY="5.0" style="-fx-text-fill: #b5c0ff;" text="Anrufer">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="caseNr" layoutX="14.0" layoutY="55.0" minWidth="140.0" />
+            <TextField fx:id="caller" layoutX="14.0" layoutY="115.0" minHeight="25.0" minWidth="140.0" />
+            <TextField fx:id="editor" layoutX="175.0" layoutY="55.0" minHeight="25.0" minWidth="140.0" />
+            <TextField fx:id="phoneNr" layoutX="175.0" layoutY="115.0" minHeight="25.0" minWidth="140.0" />
+            <Label layoutX="15.0" layoutY="35.0" style="-fx-text-fill: #b5c0ff;" text="Einsatznummer" />
+            <Label layoutX="175.0" layoutY="35.0" style="-fx-text-fill: #b5c0ff;" text="Bearbeiter" />
+            <Label layoutX="15.0" layoutY="95.0" style="-fx-text-fill: #b5c0ff;" text="Name" />
+            <Label layoutX="175.0" layoutY="95.0" style="-fx-text-fill: #b5c0ff;" text="Rufnummer" />
+            <Label layoutX="8.0" layoutY="155.0" style="-fx-text-fill: #b5c0ff;" text="Einsatzort">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="streetBtn" layoutX="206.0" layoutY="160.0" minHeight="40.0" minWidth="120.0" mnemonicParsing="false" onMouseClicked="#chooseStreet" style="-fx-text-fill: #b5c0ff; -fx-background-color: #404389; -fx-border-color: #25255e; -fx-border-radius: 8;" text="Straße auswählen" />
+            <Label fx:id="streetLabel" layoutX="10.0" layoutY="185.0" style="-fx-text-fill: #b5c0ff;" text="Keine Straße ausgewählt">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="houseNr" layoutX="15.0" layoutY="235.0" />
+            <Label layoutX="15.0" layoutY="215.0" style="-fx-text-fill: #b5c0ff;" text="Hausnummer" />
+            <Label layoutX="8.0" layoutY="270.0" style="-fx-text-fill: #b5c0ff;" text="Patient">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="patient" layoutX="15.0" layoutY="315.0" />
+            <Label layoutX="15.0" layoutY="295.0" style="-fx-text-fill: #b5c0ff;" text="Name" />
+            <CheckBox fx:id="reanimation" layoutX="15.0" layoutY="355.0" mnemonicParsing="false" style="-fx-text-fill: #b5c0ff;" text="Reanimation">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </CheckBox>
+            <TextArea fx:id="description" layoutX="180.0" layoutY="315.0" prefHeight="70.0" prefWidth="150.0" />
+            <Label layoutX="180.0" layoutY="295.0" style="-fx-text-fill: #b5c0ff;" text="Beschreibung" />
+            <Label layoutX="8.0" layoutY="395.0" style="-fx-text-fill: #b5c0ff;" text="Einsatzinfo">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="callouts" layoutX="10.0" layoutY="445.0" prefWidth="150.0" style="-fx-background-color: #404389; -fx-border-color: #25255e; -fx-border-width: 2; -fx-border-radius: 8;" />
+            <Label layoutX="10.0" layoutY="425.0" style="-fx-text-fill: #b5c0ff;" text="Einsatz-Stichwort" />
+            <Label layoutX="180.0" layoutY="425.0" style="-fx-text-fill: #b5c0ff;" text="Zusatz Info" />
+            <TextField fx:id="extra" layoutX="180.0" layoutY="445.0" />
+         </children>
+      </Pane>
+      <ListView fx:id="openBox" layoutX="428.0" layoutY="87.0" minHeight="200.0" minWidth="370.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #404389; -fx-background-radius: 8;" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="85.0" />
+      <ListView fx:id="alarmedBox" layoutX="406.0" layoutY="320.0" minHeight="260.0" minWidth="370.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #404389; -fx-background-radius: 8;" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="325.0" />
+      <Button fx:id="alarmBtn" layoutX="415.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#dispatch" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="Alarmieren" AnchorPane.rightAnchor="320.0" AnchorPane.topAnchor="15.0" />
+      <Button fx:id="clearBtn" layoutX="484.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#clearDispatch" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="Leeren" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="15.0" />
+      <Button fx:id="rtwBtn" layoutX="594.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#addRTW" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="+RTW" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="15.0" />
+      <Button fx:id="naBtn" layoutX="540.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#addNA" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="+NA" AnchorPane.rightAnchor="210.0" AnchorPane.topAnchor="15.0" />
+      <Button fx:id="chrBtn" layoutX="692.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#addCHR" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="+CHR" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="15.0" />
+      <Label layoutX="412.0" layoutY="60.0" style="-fx-text-fill: #b5c0ff;" text="Ausgewählt" AnchorPane.rightAnchor="328.0" AnchorPane.topAnchor="60.0" />
+      <Label layoutX="406.0" layoutY="300.0" style="-fx-text-fill: #b5c0ff;" text="Alarmiert" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="300.0" />
+      <Button fx:id="system" layoutX="250.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#openSystem" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="GIS öffnen" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="8.0" />
+      <Button fx:id="katBtn" layoutX="719.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#addKAT" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" text="+KAT" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="15.0" />
+   </children>
+</AnchorPane>

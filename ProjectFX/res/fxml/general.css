@@ -1,0 +1,63 @@
+.list-cell:odd, .list-cell:even {
+	-fx-background-color: #404389;
+	-fx-text-fill: #b5c0ff;
+	-fx-background-radius: 5.0;
+}
+
+.list-cell:filled:hover {
+	-fx-background-color: #7073B9;
+}
+
+.list-cell:filled:selected {
+	-fx-background-color: #7073B9;
+	-fx-border-color: #FFFFFF;
+}
+
+.list-view .scroll-bar:horizontal .increment-arrow,
+.list-view .scroll-bar:horizontal .decrement-arrow,
+.list-view .scroll-bar:horizontal .increment-button,
+.list-view .scroll-bar:horizontal .decrement-button {
+    -fx-padding: 0.0;
+}
+
+.list-view .scroll-bar:vertical .increment-button,
+.list-view .scroll-bar:vertical .decrement-button {
+    -fx-padding: 0.0;
+}
+
+.list-view .scroll-bar:vertical .increment-arrow,
+.list-view .scroll-bar:vertical .decrement-arrow {
+	-fx-background-color: #25255e;
+	-fx-visibility: hidden;
+}
+
+.list-view .scroll-bar:vertical {
+    -fx-width: 2px;
+}
+
+.list-view .scroll-bar:vertical .track {
+	-fx-background-color: #25255e;
+}
+
+.list-view .scroll-bar:vertical .thumb {
+	-fx-background-color: rgba(60.0, 64.0, 67.0, 0.3);
+  	-fx-border-radius: 15.0px;
+}
+
+.choice-box {
+	-fx-mark-color: #FFFFFF;
+}
+
+.choice-box .menu-item:focused {
+	-fx-background-color: #25255e;
+	-fx-text-fill: #FFFFFF;
+}
+
+.choice-box .menu-item {
+	-fx-background-color: #404389;
+	-fx-text-fill: #FFFFFF;
+}
+
+.choice-box .label {
+	-fx-text-fill: #FFFFFF;
+}

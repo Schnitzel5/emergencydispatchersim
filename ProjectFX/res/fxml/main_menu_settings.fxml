@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #25255e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.duowoj.game.controller.MainMenuSettingsController">
+   <children>
+      <Button layoutX="122.0" layoutY="495.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#cancel" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-border-radius: 8;" text="Cancel" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="80.0" />
+      <Button layoutX="268.0" layoutY="495.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#startGame" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-border-radius: 8;" text="Start game" AnchorPane.bottomAnchor="80.0" AnchorPane.rightAnchor="80.0" />
+      <Button disable="true" layoutX="53.0" layoutY="43.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-border-radius: 8;" text="Debug mode" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="50.0" />
+      <CheckBox fx:id="debug" layoutX="200.0" layoutY="62.0" mnemonicParsing="false" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="60.0" />
+      <Button disable="true" layoutX="90.0" layoutY="119.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-border-radius: 8;" text="Mit DND starten" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="120.0" />
+      <Button disable="true" layoutX="90.0" layoutY="190.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-border-radius: 8;" text="Verzögerung" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="190.0" />
+      <Button disable="true" layoutX="90.0" layoutY="261.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-border-radius: 8;" text="Leitstelle - Hotkey" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="260.0" />
+      <CheckBox fx:id="dnd" layoutX="200.0" layoutY="132.0" mnemonicParsing="false" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="130.0" />
+      <CheckBox fx:id="smartdelay" layoutX="200.0" layoutY="202.0" mnemonicParsing="false" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="200.0" />
+      <ChoiceBox fx:id="hotkey1" layoutX="195.0" layoutY="268.0" prefWidth="150.0" style="-fx-background-color: #25255e; -fx-border-color: #404389; -fx-border-width: 2; -fx-border-radius: 8;" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="265.0" />
+      <Label fx:id="fileLocation" layoutX="230.0" layoutY="405.0" maxWidth="330.0" prefHeight="30.0" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 5;" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="405.0" />
+      <Button layoutX="70.0" layoutY="400.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#chooseFile" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-border-radius: 8;" text="Speicherort selber wählen ..." AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="400.0" />
+      <Button disable="true" layoutX="64.0" layoutY="331.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-border-radius: 8;" text="Canvasgröße" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="330.0" />
+      <ChoiceBox fx:id="canvas" layoutX="200.0" layoutY="336.0" prefWidth="150.0" style="-fx-background-color: #25255e; -fx-border-color: #404389; -fx-border-width: 2; -fx-border-radius: 8;" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="335.0" />
+      <Button disable="true" layoutX="320.0" layoutY="50.0" minHeight="40.0" minWidth="100.0" mnemonicParsing="false" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-border-radius: 8;" text="Automatischer Speicherort" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="50.0" />
+      <CheckBox fx:id="path" layoutX="449.0" layoutY="60.0" mnemonicParsing="false" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="60.0" />
+      <!--<TextField fx:id="fileLocation" layoutX="70.0" layoutY="334.0" minHeight="40.0" minWidth="350.0" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="330.0" />
+      <Button fx:id="fileBtn" layoutX="494.0" layoutY="338.0" minHeight="40.0" minWidth="90.0" mnemonicParsing="false" onMouseClicked="#chooseFile" style="-fx-background-color: #404389; -fx-text-fill: #b5c0ff; -fx-background-radius: 8;" text="Auswählen" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="330.0" />-->
+   </children>
+</AnchorPane>
