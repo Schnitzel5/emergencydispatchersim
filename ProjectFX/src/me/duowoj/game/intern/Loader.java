@@ -19,6 +19,7 @@ import me.duowoj.game.model.Location;
 public class Loader {
 
     private final static AtomicBoolean interrupt = new AtomicBoolean();
+    private static final List<Point2D> translocOrigin = new ArrayList<>();
     public final static List<String> streets = new ArrayList<>();
     public final static List<Location> locs = new ArrayList<>();
     public final static List<String[]> cases = new ArrayList<>();
@@ -103,14 +104,14 @@ public class Loader {
                 break;
             }
             double[] current = convertLatLong(street);
-            transloc.add(new Point2D(current[0] / 1000d, current[1] / 763d));
+            translocOrigin.add(new Point2D(current[0] / 1000d, current[1] / 763d));
         }
     }
 
     public static void translateLocs() {
         for (int i = 0; i < transloc.size(); i++) {
             // transloc.set(i, new Point2D(transloc.get(i).getX() * Settings.settings.getWidth(), transloc.get(i).getY() * Settings.settings.getHeight()));
-            transloc.set(i, new Point2D(transloc.get(i).getX() * 1000d, transloc.get(i).getY() * 763d));
+            transloc.set(i, new Point2D(translocOrigin.get(i).getX() * 1000d, translocOrigin.get(i).getY() * 763d));
         }
     }
 
